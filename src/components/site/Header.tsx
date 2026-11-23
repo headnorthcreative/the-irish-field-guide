@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import logo from "@/assets/crystal-tours-logo.svg.asset.json";
 
 const nav = [
   { label: "Field Guide", to: "/", hash: "services" },
@@ -19,8 +20,8 @@ export function Header() {
         <span className="hidden sm:inline">The Irish Field Guide</span>
       </div>
       <div className="flex h-[64px] items-center gap-4 px-5 md:px-14 lg:gap-10">
-        <Link to="/" className="min-w-0 truncate text-[16px] font-bold tracking-[0.22em] text-moss sm:text-[20px]">
-          CRYSTAL TOURS <span className="text-amber">•</span> IRELAND
+        <Link to="/" className="shrink-0" aria-label="Crystal Tours Ireland — home">
+          <img src={logo.url} alt="Crystal Tours Ireland" width={200} height={55} className="h-[44px] w-auto sm:h-[52px]" />
         </Link>
         <div aria-hidden className="stamp hidden h-[58px] w-[58px] shrink-0 place-items-center text-center text-[10px] font-bold uppercase leading-tight text-amber sm:grid">
           Co. Waterford<br />52°N
