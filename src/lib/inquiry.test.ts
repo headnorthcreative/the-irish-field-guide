@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { stepErrors } from "./inquiry";
 
 describe("inquiry rules", () => {
-  it("rejects a party larger than the 7-seat V-Class", () => {
+  it("rejects a party larger than 7 guests in the online letter", () => {
     expect(stepErrors(0, { travel_dates: "12 – 19 September", party_size: 8 })['party_size']).toBeDefined();
   });
   it("accepts a party of 7", () => {

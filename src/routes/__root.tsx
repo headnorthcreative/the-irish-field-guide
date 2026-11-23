@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Crystal Tours Ireland — Private Chauffeured Tours" },
-      { name: "description", content: "Private chauffeured touring of Kerry and the West of Ireland with Brede." },
+      { name: "description", content: "Luxury private tours and chauffeur services across Ireland with Brede and Crystal Tours Ireland." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

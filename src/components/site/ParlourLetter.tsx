@@ -135,7 +135,7 @@ export function ParlourLetter() {
             </fieldset>
             <label className="flex cursor-pointer items-start gap-3 text-[19px]">
               <input type="checkbox" className="mt-1.5 size-4 accent-[var(--moss)]" checked={v.ancestry_search} onChange={(e) => set("ancestry_search", e.target.checked)} />
-              <span>Please search the parish registers for my family before we land.</span>
+              <span>We’d like to visit the places our family came from.</span>
             </label>
             {v.ancestry_search && (
               <div>
@@ -192,12 +192,12 @@ export function ParlourLetter() {
       <Dialog open={!!sent} onOpenChange={(o) => !o && setSent(null)}>
         <DialogContent className="lin max-w-lg rounded-none border border-ink/30">
           <div aria-hidden className="stamp absolute right-8 top-6 grid h-[78px] w-[78px] place-items-center text-center text-[10px] font-bold uppercase leading-tight text-amber">
-            Posted<br />Kenmare<br />52°08′N
+            Posted<br />Co. Waterford<br />52°N
           </div>
           <DialogTitle className="pr-24 text-[36px] font-semibold leading-tight text-moss">Go raibh maith agat{sent ? `, ${sent.name.split(" ")[0]}` : ""}.</DialogTitle>
           <DialogDescription className="text-[18px] leading-[1.6] text-ink/80">
-            Your letter is on Brede’s table. She replies personally, usually within a day, with a first sketch of the route
-            {sent?.ancestry_search ? " and a note on where the parish search will begin" : ""}.
+            Your letter is on Brede’s table. We’ll be in touch personally with first ideas for your tour
+            {sent?.ancestry_search ? " and some thoughts on your family places" : ""}.
           </DialogDescription>
           {sent && (
             <p className="hand text-[22px] text-amber">

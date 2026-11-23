@@ -1,20 +1,20 @@
 import { z } from "zod";
 
 export const DESTINATIONS = [
-  "Ring of Kerry & Skellig",
-  "Beara & Dingle",
-  "The Burren & Clare",
+  "The Ring of Kerry",
+  "Galway, Cliffs of Moher & the Burren",
+  "Cork, Kinsale, Midleton & Cobh",
   "Wicklow & Kilkenny",
-  "Connemara & Mayo",
+  "Golf, shopping or ancestry",
   "Not sure yet — advise me",
 ] as const;
 
-export const MAX_PARTY = 7; // seats in the Mercedes V-Class
+export const MAX_PARTY = 7; // largest party the online letter accepts; bigger groups ring
 
 export const stepSchemas = [
   z.object({
     travel_dates: z.string().trim().min(3, "Tell Brede roughly when you hope to travel").max(200),
-    party_size: z.coerce.number().int().min(1, "At least one traveller").max(MAX_PARTY, `The V-Class seats up to ${MAX_PARTY} guests`),
+    party_size: z.coerce.number().int().min(1, "At least one traveller").max(MAX_PARTY, `For more than ${MAX_PARTY} guests, please ring us`),
   }),
   z.object({
     destinations: z.array(z.string()).min(1, "Choose at least one place, or ‘Not sure yet’"),

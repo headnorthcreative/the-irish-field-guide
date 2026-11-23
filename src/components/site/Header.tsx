@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
 const nav = [
-  { label: "Field Guide", to: "/", hash: "seanchas" },
+  { label: "Field Guide", to: "/", hash: "services" },
   { label: "Journeys & Lore", to: "/journeys" },
   { label: "Meet Brede", to: "/", hash: "brede" },
-  { label: "Ancestral Search", to: "/", hash: "ancestry" },
+  { label: "Questions", to: "/", hash: "faq" },
 ] as const;
 
 export function Header() {
@@ -23,7 +23,7 @@ export function Header() {
           CRYSTAL TOURS <span className="text-amber">•</span> IRELAND
         </Link>
         <div aria-hidden className="stamp hidden h-[58px] w-[58px] shrink-0 place-items-center text-center text-[10px] font-bold uppercase leading-tight text-amber sm:grid">
-          Co. Kerry<br />52°N
+          Co. Waterford<br />52°N
         </div>
         <nav className="ml-4 hidden gap-8 text-[16px] text-ink/75 lg:flex">
           {nav.map((n) => (

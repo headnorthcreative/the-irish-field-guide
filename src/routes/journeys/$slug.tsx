@@ -52,7 +52,7 @@ function JourneyPage() {
       <section className="mt-20 grid gap-10 border-t border-ink/20 pt-14 md:grid-cols-12 md:gap-12">
         <div className="md:col-span-4">
           <p className="text-[16px] italic text-amber">Seanchas</p>
-          <h2 className="text-[40px] font-semibold leading-[1.02] text-moss">The route, day by day</h2>
+          <h2 className="text-[40px] font-semibold leading-[1.02] text-moss">Along the road</h2>
           <p className="hand mt-6 -rotate-1 text-[22px] text-amber">↳ {j.margin}</p>
         </div>
         <ol className="ruled border border-ink/15 bg-notepaper p-6 sm:p-10 md:col-span-7 md:col-start-6">
@@ -65,8 +65,17 @@ function JourneyPage() {
         </ol>
       </section>
 
+      <section className="mt-20 grid gap-8 border-t border-ink/20 pt-12 md:grid-cols-12 md:gap-12">
+        <h2 className="text-[32px] font-semibold leading-[1.05] text-moss md:col-span-4">The Crystal Tours experience</h2>
+        <ul className="grid gap-x-10 border-t border-ink/40 sm:grid-cols-2 md:col-span-7 md:col-start-6">
+          {["Personalised meet & greet", "Help with your luggage", "Complimentary Wi-Fi", "Refreshments on board", "Luxury vehicles", "Knowledgeable chauffeur-guides"].map((x) => (
+            <li key={x} className="border-b border-ink/20 py-3 text-[19px] italic text-ink/85">{x}</li>
+          ))}
+        </ul>
+      </section>
+
       <section className="mt-20 flex flex-col gap-6 border-t border-ink/20 pt-12 md:flex-row md:items-center md:justify-between">
-        <p className="max-w-xl text-[28px] font-semibold leading-tight text-moss">Shall Brede redraw this one around your dates?</p>
+        <p className="max-w-xl text-[28px] font-semibold leading-tight text-moss">Shall we shape this tour around your dates?</p>
         <div className="flex flex-wrap items-center gap-6">
           <Link to="/" hash="parlour" className="inline-grid h-12 place-items-center bg-moss px-8 text-[16px] font-semibold tracking-wide text-cream hover:bg-amber">Write to Brede</Link>
           <a href={whatsappLink(`Dia duit Brede, I'm interested in ${j.title} (${j.length}).`)} target="_blank" rel="noreferrer" className="border-b border-amber pb-1 text-[19px] italic text-moss hover:text-amber">Ask on WhatsApp →</a>

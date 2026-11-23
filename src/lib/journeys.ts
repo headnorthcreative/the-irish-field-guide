@@ -1,7 +1,11 @@
-import skellig from "@/assets/skellig-boreen.jpg";
+import kerry from "@/assets/skellig-boreen.jpg";
 import burren from "@/assets/burren-field.jpg";
-import wicklow from "@/assets/wicklow-treetops.jpg";
+import wicklowGlen from "@/assets/wicklow-treetops.jpg";
+import loughTay from "@/assets/lough-tay.jpg";
+import cobh from "@/assets/cobh-harbour.jpg";
+import coast from "@/assets/hero-dunquin.jpg";
 
+// Content follows the live crystaltours.ie tour pages. Rewritten for tone, not invented.
 export type JourneyDay = { day: string; title: string; note: string };
 export type Journey = {
   slug: string;
@@ -18,59 +22,113 @@ export type Journey = {
 
 export const journeys: Journey[] = [
   {
-    slug: "skellig-outposts",
-    title: "The Skellig Outposts",
-    caption: "The Skellig Outposts — 6 days",
-    region: "Ring of Kerry, Iveragh & Skellig Michael",
-    length: "6 days · 5 nights",
-    image: skellig,
+    slug: "ring-of-kerry",
+    title: "The Ring of Kerry",
+    caption: "The Ring of Kerry — scenic wonders & Irish charm",
+    region: "Co. Kerry · 179 km (111 miles)",
+    length: "Full day",
+    image: kerry,
     summary:
-      "The Ring of Kerry driven anti-clockwise, against the coaches, with a boat to Skellig Michael when the Atlantic allows it. Nights in Kenmare and Portmagee.",
-    pace: "Two to four hours of driving a day, never more. Long lunches are part of the route.",
+      "The legendary 179-kilometre loop through County Kerry: coastal cliffs, emerald valleys and colourful villages, from Killarney National Park to the ancient stones of Staigue Fort.",
+    pace: "A full day, with time for a wander in Kenmare or Sneem and plenty of stops for photographs.",
     days: [
-      { day: "Day 1", title: "Shannon or Kerry airport to Kenmare", note: "Collected at arrivals. Tea in Kenmare, a short walk to the stone circle, early dinner." },
-      { day: "Day 2", title: "Beara and the Healy Pass", note: "Allihies copper mines, the pier at slack water, back over the pass at golden hour." },
-      { day: "Day 3", title: "Kenmare to Portmagee via Staigue Fort", note: "Soda bread at Nora's, the farmer's pasture to Staigue, Derrynane strand at low tide." },
-      { day: "Day 4", title: "Skellig Michael", note: "Boat at 08:30 if the swell is kind. If not, the Skellig Ring and Valentia's slate quarry instead." },
-      { day: "Day 5", title: "Glenbeigh and the Kerry Bog Village", note: "Turf fires, a sheepdog demonstration, and the long slow road to Killarney." },
-      { day: "Day 6", title: "Killarney to your departure", note: "Muckross House early, before the crowds, then the airport or onward." },
+      { day: "Killarney", title: "Killarney National Park", note: "Torc Waterfall, Muckross House, Ross Castle and the serene Lakes of Killarney." },
+      { day: "Dunloe", title: "The Gap of Dunloe", note: "A stunning mountain pass, perfect for a walk or a horse-drawn jaunting car." },
+      { day: "Sneem", title: "Sneem village", note: "A colourful stop with traditional Irish pubs and craft shops." },
+      { day: "Staigue", title: "Staigue Fort", note: "An ancient stone ringfort with panoramic views." },
+      { day: "Derrynane", title: "Derrynane Beach & House", note: "A windswept, golden-sand beach linked to the Irish patriot Daniel O’Connell." },
+      { day: "Skellig", title: "The Skellig Ring (detour)", note: "A wilder road to Portmagee and boat trips to Skellig Michael — a UNESCO site and Star Wars filming location." },
+      { day: "Views", title: "Moll’s Gap, Ladies View & Leprechaun Crossing", note: "Iconic viewpoints with sweeping vistas of mountains and lakes." },
     ],
-    margin: "Skellig boats are weather-dependent — Brede always has a plan B that nobody regrets.",
+    margin: "Mountains, peat bogs and the wild Atlantic — all in one day.",
   },
   {
-    slug: "burrens-solitude",
-    title: "The Burren’s Solitude",
-    caption: "The Burren’s Solitude",
-    region: "Co. Clare, the Burren & the Wild Atlantic Way",
-    length: "4 days · 3 nights",
+    slug: "galway-cliffs-of-moher-burren",
+    title: "Galway, the Cliffs of Moher & the Burren",
+    caption: "Galway, the Cliffs of Moher & the Burren",
+    region: "Co. Galway & Co. Clare · UNESCO Burren",
+    length: "Day tour",
     image: burren,
     summary:
-      "Limestone, orchids and holy wells. The Cliffs of Moher at the quiet end of the day, music in Doolin, and the lesser-known Fanore coast.",
-    pace: "Gentle walking on limestone pavement; sturdy shoes, nothing technical.",
+      "From the city of Galway to the great Cliffs of Moher and the strange, beautiful limestone of the Burren — the west coast at its wildest, with a guide who knows the best spots.",
+    pace: "Travel in comfort between the stops, with stories and insights along the way.",
     days: [
-      { day: "Day 1", title: "Shannon to Ballyvaughan", note: "Collected at Shannon. Oysters at the harbour, the Flaggy Shore walk." },
-      { day: "Day 2", title: "The high Burren", note: "Poulnabrone dolmen before nine, a botanist friend for the orchids, a holy well with ribbons." },
-      { day: "Day 3", title: "Doolin and the cliffs", note: "Cliffs of Moher from Hag's Head at evening, then a session in Doolin." },
-      { day: "Day 4", title: "Kilfenora to Shannon or onward", note: "The high crosses, a perfumery in the hills, and the road out." },
+      { day: "Galway", title: "Galway", note: "The lively west-coast city on Galway Bay." },
+      { day: "Moher", title: "The Cliffs of Moher", note: "Ireland’s most famous cliffs, rising straight out of the Atlantic." },
+      { day: "Burren", title: "The Burren UNESCO Geopark", note: "A rare limestone landscape of flowers, ancient tombs and stone walls." },
     ],
-    margin: "The cliffs are best after 5pm, when the coaches have gone home.",
+    margin: "A warm meet-and-greet starts the day; refreshments keep you going.",
   },
   {
-    slug: "wicklow-glens",
-    title: "Wicklow’s Glens",
-    caption: "Wicklow’s Glens",
-    region: "Co. Wicklow & Ancient Kilkenny",
-    length: "3 days · 2 nights",
-    image: wicklow,
+    slug: "cork-kinsale-midleton-cobh",
+    title: "Enchanting Cork, Kinsale, Midleton & Cobh",
+    caption: "Cork, Kinsale, Midleton & Cobh",
+    region: "Co. Cork & the south coast",
+    length: "Day tour or longer",
+    image: cobh,
     summary:
-      "An hour from Dublin and a world away: Glendalough's monastic city, the Sally Gap, and a day in medieval Kilkenny with its castle and Black Abbey.",
-    pace: "Short drives, unhurried walks around the lakes.",
+      "Cork’s English Market and St. Fin Barre’s Cathedral, an exclusive whiskey experience at Jameson in Midleton, Cobh’s Titanic history, and gourmet seafood by the harbour in Kinsale.",
+    pace: "Heritage, food and comfort — every detail tailored to you.",
     days: [
-      { day: "Day 1", title: "Dublin to Glendalough", note: "Collected at your Dublin hotel. The Sally Gap, Lough Tay, and the upper lake at Glendalough." },
-      { day: "Day 2", title: "Wicklow to Kilkenny", note: "Avoca's weavers, Jerpoint Abbey, then Kilkenny's Medieval Mile on foot." },
-      { day: "Day 3", title: "Kilkenny to Dublin or the West", note: "Kilkenny Castle early, then Dublin airport or onward to Kerry." },
+      { day: "Cork", title: "Cork City", note: "The famed English Market with its artisan food, and the Gothic spires of St. Fin Barre’s Cathedral." },
+      { day: "Midleton", title: "Jameson Distillery, Midleton", note: "Aged barrels and masterful craft tell the story of Ireland’s most iconic spirit." },
+      { day: "Cobh", title: "Cobh", note: "The Titanic’s last port of call, where colourful houses cascade toward the sea." },
+      { day: "Kinsale", title: "Kinsale", note: "Ireland’s gourmet capital: fresh seafood in award-winning restaurants and a yacht-filled harbour." },
     ],
-    margin: "Glendalough's upper lake path is quiet before ten — worth the early tea.",
+    margin: "Céad míle fáilte — welcome to the south.",
+  },
+  {
+    slug: "wicklow-kilkenny",
+    title: "Escape to Wicklow & Kilkenny",
+    caption: "Wicklow & Kilkenny — one day or several",
+    region: "Co. Wicklow & Co. Kilkenny",
+    length: "Single day or multi-day",
+    image: wicklowGlen,
+    summary:
+      "Wicklow’s wild beauty and Kilkenny’s medieval charm: Glendalough’s ancient monastic ruins, the Wicklow Mountains and the grandeur of Kilkenny Castle — in a single day, or at a leisurely pace over several.",
+    pace: "Do it in one day, or slow down with a night in a luxury hotel in between.",
+    days: [
+      { day: "Mountains", title: "The Wicklow Mountains", note: "A scenic drive through the “Garden of Ireland” with panoramic views of lush, rolling hills. On the longer tour: Powerscourt Waterfall and a day in the national park." },
+      { day: "Glendalough", title: "Glendalough", note: "The ancient monastic site in a glacial valley — the round tower, the ruins and a stroll by the lakes. A picnic by the water on the multi-day tour." },
+      { day: "Castle", title: "Kilkenny Castle & Gardens", note: "A tour of the castle, its history and its beautifully restored interiors." },
+      { day: "Kilkenny", title: "The Medieval Mile", note: "St. Canice’s Cathedral, the Black Abbey, shops and cafés — and on the longer tour, a craft workshop or an evening music session." },
+    ],
+    margin: "Single day includes entry to key attractions; multi-day adds luxury hotels and breakfast.",
+  },
+  {
+    slug: "wicklow-garden-of-ireland",
+    title: "Wicklow: The Garden of Ireland",
+    caption: "Wicklow — the Garden of Ireland",
+    region: "Co. Wicklow · just south of Dublin",
+    length: "Day tour",
+    image: loughTay,
+    summary:
+      "Emerald valleys, cascading waterfalls and misty mountains just south of Dublin. Private estates like Powerscourt, the dark waters of Lough Tay and the open road of the Sally Gap.",
+    pace: "A luxurious escape into untamed beauty, at your own pace.",
+    days: [
+      { day: "Powerscourt", title: "Powerscourt Estate", note: "Some of the world’s most exquisite gardens, and the waterfall." },
+      { day: "Lough Tay", title: "Lough Tay — the “Guinness Lake”", note: "Named for its dark waters, with a pale sandy beach at its head." },
+      { day: "Sally Gap", title: "The Sally Gap", note: "The high mountain road, where you might meet some carefree sheep." },
+    ],
+    margin: "Not just a destination — your personal retreat.",
+  },
+  {
+    slug: "bespoke-private-tours",
+    title: "Bespoke Private Tours",
+    caption: "Bespoke — drawn around you",
+    region: "Anywhere in Ireland",
+    length: "As long as you like",
+    image: coast,
+    summary:
+      "Your Irish adventure, designed entirely around you: your interests, your pace, your perfect day. Ancient history, natural wonders, food, golf, shopping or tracing your family roots.",
+    pace: "No rushing, no rigid schedules. Stay as long as you like at each place and change plans as you go.",
+    days: [
+      { day: "i.", title: "Share your vision", note: "Tell us about your interests, the places you must see and the experiences you dream of." },
+      { day: "ii.", title: "We design", note: "Our team creates a personalised itinerary around your preferences." },
+      { day: "iii.", title: "Refine together", note: "We adjust the plan until it’s perfect for you." },
+      { day: "iv.", title: "Experience Ireland", note: "Enjoy your bespoke adventure with complete peace of mind." },
+    ],
+    margin: "Hidden gems or iconic landmarks — every stop chosen with you in mind.",
   },
 ];
 
@@ -78,11 +136,12 @@ export function getJourney(slug: string) {
   return journeys.find((j) => j.slug === slug);
 }
 
-export type MapStop = { id: string; label: string; x: number; y: number; lore: string; time?: string };
+export type MapStop = { id: string; label: string; x: number; y: number; labelX: number; lore: string; time?: string };
 
+// Ring of Kerry highlights, as listed on the live tour page.
 export const mapStops: MapStop[] = [
-  { id: "derrynane", label: "Derrynane — swim at low tide", x: 180, y: 170, lore: "Daniel O'Connell's home sits behind the dunes. At low tide you can walk to Abbey Island and its graveyard in the sand.", time: "Best at low water, check the tables with Brede" },
-  { id: "staigue", label: "Staigue Fort", x: 400, y: 200, lore: "A drystone ring fort, some 2,500 years old, reached by a farmer's lane. Walls four metres thick and not a drop of mortar.", time: "45 minutes up the boreen" },
-  { id: "kenmare", label: "Kenmare · Crowley’s, fiddle Tues", x: 620, y: 250, lore: "The little town at the head of the bay. Crowley's has a fiddle session on Tuesday nights and the warmest fire in the county.", time: "Session from 21:30" },
-  { id: "allihies", label: "Beara · Allihies pier, slack water 15:20", x: 300, y: 300, lore: "Painted houses, old copper mines and a pier where the seals come in on slack water. Rarely a coach in sight.", time: "Slack water around mid-afternoon" },
+  { id: "killarney", label: "Killarney · Muckross", x: 700, y: 150, labelX: 640, lore: "Killarney National Park: Torc Waterfall, Muckross House and the Lakes of Killarney.", time: "where the Ring begins" },
+  { id: "molls", label: "Moll’s Gap · Ladies View", x: 640, y: 255, labelX: 560, lore: "Iconic viewpoints with sweeping vistas of mountains and lakes." },
+  { id: "staigue", label: "Staigue Fort", x: 400, y: 200, labelX: 350, lore: "An ancient stone ringfort with panoramic views." },
+  { id: "derrynane", label: "Derrynane", x: 180, y: 170, labelX: 120, lore: "A windswept golden-sand beach and Derrynane House, home of Daniel O’Connell.", time: "detour: the Skellig Ring to Portmagee" },
 ];
