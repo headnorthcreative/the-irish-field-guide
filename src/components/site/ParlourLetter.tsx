@@ -196,7 +196,7 @@ export function ParlourLetter() {
           </div>
           <DialogTitle className="pr-24 text-[36px] font-semibold leading-tight text-moss">Go raibh maith agat{sent ? `, ${sent.name.split(" ")[0]}` : ""}.</DialogTitle>
           <DialogDescription className="text-[18px] leading-[1.6] text-ink/80">
-            Your letter is on Brede’s table. He replies personally, usually within a day, with a first sketch of the route
+            Your letter is on Brede’s table. She replies personally, usually within a day, with a first sketch of the route
             {sent?.ancestry_search ? " and a note on where the parish search will begin" : ""}.
           </DialogDescription>
           {sent && (

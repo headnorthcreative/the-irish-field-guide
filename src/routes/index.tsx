@@ -39,7 +39,7 @@ const faqs = [
   { q: "How does the deposit work?", a: "Once you’re happy with Brede’s route sketch, a 25% deposit holds your dates. The balance is due 30 days before you travel. Cancel more than 60 days ahead and the deposit is returned in full; closer than that, Brede will always try to move your dates first." },
   { q: "What is included in the day rate?", a: "The vehicle, fuel, tolls, parking, Brede’s time and local knowledge, chilled water and Wi-Fi on board. Hotels, meals and entry fees are booked on your behalf and billed at cost, so you never pay a mark-up." },
   { q: "Can you collect us from the airport?", a: "Yes — Shannon, Kerry, Cork or Dublin. Brede tracks your flight and waits in arrivals with your name on a card, however late the plane." },
-  { q: "How long does an ancestral search take?", a: "Send a surname and a county at least six weeks before you land. Brede works the parish registers, Griffith’s Valuation and the civil records, and sends what he finds before you fly." },
+  { q: "How long does an ancestral search take?", a: "Send a surname and a county at least six weeks before you land. Brede works the parish registers, Griffith’s Valuation and the civil records, and sends what she finds before you fly." },
 ];
 
 function Home() {
@@ -103,7 +103,7 @@ function Home() {
         <div className="md:col-span-5 md:col-start-8">
           <p className={eyebrow}>Brede’s Notebook</p>
           <h2 className={`${h2} text-[42px] leading-[1] md:text-[50px]`}>Twenty years of boreens</h2>
-          <p className="mt-6 text-[18px] leading-[1.65] text-ink/80">Brede has driven Kerry, Clare and Cork since 2005. He knows which sexton keeps the graveyard key and which publican sings after nine.</p>
+          <p className="mt-6 text-[18px] leading-[1.65] text-ink/80">Brede has driven Kerry, Clare and Cork since 2005. She knows which sexton keeps the graveyard key and which publican sings after nine.</p>
           <p className="hand mt-8 border-l-2 border-amber pl-5 text-[24px] leading-[1.3] text-ink md:text-[27px]">“Stopped at the drystone wall above Caherdaniel again. Moss thicker this year. They always go quiet here.”</p>
         </div>
       </section>
@@ -116,9 +116,9 @@ function Home() {
           <p className="hand mt-6 text-[22px] text-amber -rotate-1">↳ the route is drawn with you, not for you</p>
         </div>
         <div className="space-y-8 text-[18px] leading-[1.7] text-ink/80 md:col-span-7 md:col-start-6 md:columns-2 md:gap-12 md:space-y-0">
-          <p className="break-inside-avoid md:mb-6"><span className="float-left mr-2 mt-1 text-[64px] font-semibold leading-[0.8] text-moss">Y</span>ou write to Brede with dates and a few wishes. Within a day he sends back a hand-drawn sketch of a route — where you’ll sleep, roughly how long each drive is, and the two or three things he thinks you shouldn’t miss.</p>
+          <p className="break-inside-avoid md:mb-6"><span className="float-left mr-2 mt-1 text-[64px] font-semibold leading-[0.8] text-moss">Y</span>ou write to Brede with dates and a few wishes. Within a day she sends back a hand-drawn sketch of a route — where you’ll sleep, roughly how long each drive is, and the two or three things she thinks you shouldn’t miss.</p>
           <p className="break-inside-avoid md:mb-6">Once the sketch feels right, a deposit holds the dates and Brede books the hotels, the Skellig boat and any tables worth having, all at cost.</p>
-          <p className="break-inside-avoid md:mb-6">On the day, he collects you at the airport or hotel door. Mornings start when you’re ready. If the light is good on the Healy Pass, you stop. If it rains, there’s a pub with a fire and a man with a story.</p>
+          <p className="break-inside-avoid md:mb-6">On the day, she collects you at the airport or hotel door. Mornings start when you’re ready. If the light is good on the Healy Pass, you stop. If it rains, there’s a pub with a fire and a man with a story.</p>
           <p className="break-inside-avoid">Drives are kept to two or three hours a day. Every evening Brede talks through tomorrow, and changes it if you’d rather.</p>
         </div>
       </section>
@@ -145,7 +145,7 @@ function Home() {
         <div className="md:col-span-5">
           <p className={eyebrow}>The Carriage</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>A Mercedes V-Class, kept like a parlour</h2>
-          <p className={`mt-5 ${body}`}>Brede drives one vehicle, his own, and keeps it the way his mother kept the good room: warm, spotless and quiet enough to hear the rain.</p>
+          <p className={`mt-5 ${body}`}>Brede drives one vehicle, her own, and keeps it the way her mother kept the good room: warm, spotless and quiet enough to hear the rain.</p>
         </div>
         <dl className="border-t border-ink/40 md:col-span-6 md:col-start-7">
           {[
@@ -173,7 +173,7 @@ function Home() {
           <ol className="mt-8 space-y-3 text-[17px] leading-[1.55] text-ink/80">
             <li><span className="hand mr-2 text-[22px] text-amber">i.</span>You send names, dates, a county — whatever the family remembers.</li>
             <li><span className="hand mr-2 text-[22px] text-amber">ii.</span>Brede searches parish registers, Griffith’s Valuation and civil records.</li>
-            <li><span className="hand mr-2 text-[22px] text-amber">iii.</span>He finds the townland, the graveyard and, often, the walls.</li>
+            <li><span className="hand mr-2 text-[22px] text-amber">iii.</span>She finds the townland, the graveyard and, often, the walls.</li>
             <li><span className="hand mr-2 text-[22px] text-amber">iv.</span>On the day, you stand in the doorway. The kettle is usually on next door.</li>
           </ol>
         </div>
@@ -207,7 +207,7 @@ function Home() {
         <div className="md:col-span-4">
           <p className={eyebrow}>Questions at the fireside</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>What travellers ask Brede</h2>
-          <p className={`mt-5 ${body}`}>Anything not here, ring or WhatsApp — he’d rather talk than write.</p>
+          <p className={`mt-5 ${body}`}>Anything not here, ring or WhatsApp — she’d rather talk than write.</p>
         </div>
         <Accordion type="single" collapsible className="border-t border-ink/40 md:col-span-7 md:col-start-6">
           {faqs.map((f) => (
