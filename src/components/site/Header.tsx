@@ -27,7 +27,7 @@ export function Header() {
         </div>
         <nav className="ml-4 hidden gap-8 text-[16px] text-ink/75 lg:flex">
           {nav.map((n) => (
-            <Link key={n.label} to={n.to} hash={"hash" in n ? n.hash : undefined} className="hover:text-amber">
+            <Link key={n.label} to={n.to} {...("hash" in n ? { hash: n.hash } : {})} className="hover:text-amber">
               {n.label}
             </Link>
           ))}
@@ -50,7 +50,7 @@ export function Header() {
             <Link
               key={n.label}
               to={n.to}
-              hash={"hash" in n ? n.hash : undefined}
+              {...("hash" in n ? { hash: n.hash } : {})}
               onClick={() => setOpen(false)}
               className="block border-b border-ink/10 py-3 hover:text-amber"
             >

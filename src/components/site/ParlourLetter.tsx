@@ -34,7 +34,7 @@ const label = "text-[12px] uppercase tracking-[0.18em] text-ink/55";
 const field =
   "hand mt-1 w-full border-0 border-b border-ink/30 bg-transparent pb-1 text-[26px] text-ink/85 placeholder:text-ink/35 focus:border-amber focus:outline-none";
 
-function Err({ msg }: { msg?: string }) {
+function Err({ msg }: { msg?: string | undefined }) {
   return msg ? <p className="mt-1 text-[15px] italic text-destructive" role="alert">{msg}</p> : null;
 }
 
