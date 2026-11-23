@@ -94,6 +94,7 @@
   --input: #3a2a1e4d;
   --ring: #a8642a;
   --moss: #2f4232;
+  --logo-clover: oklch(0.692 0.208 41.3);
   --amber: #a8642a;
   --amber-film: #e8a650;
   --cream: #efe7d6;
@@ -112,6 +113,7 @@
 
 @theme inline {
   --color-moss: var(--moss);
+  --color-logo-clover: var(--logo-clover);
   --color-amber: var(--amber);
   --color-amber-film: var(--amber-film);
   --color-cream: var(--cream);

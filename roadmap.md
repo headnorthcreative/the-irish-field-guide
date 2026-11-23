@@ -1,0 +1,2 @@
+- [x] Make the original logo portable to external hosting.
+- [x] Centre desktop navigation and verify desktop/mobile layouts.
