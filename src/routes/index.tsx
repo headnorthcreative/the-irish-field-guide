@@ -99,7 +99,7 @@ function Home() {
 
       {/* Brede */}
       <section id="brede" className={`${px} grid scroll-mt-28 items-center gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
-        <img src={brede} alt="Brede leaning on a drystone wall above the Kerry coast" loading="lazy" width={1280} height={1024} className="h-[340px] w-full border-[10px] border-paper object-cover md:col-span-6 md:h-[480px]" />
+        <img src={brede} alt="Brede, your driver and guide" loading="lazy" width={1280} height={1024} className="h-[340px] w-full border-[10px] border-paper object-cover md:col-span-6 md:h-[480px]" />
         <div className="md:col-span-5 md:col-start-8">
           <p className={eyebrow}>Brede’s Notebook</p>
           <h2 className={`${h2} text-[42px] leading-[1] md:text-[50px]`}>Twenty years of boreens</h2>
