@@ -1,2 +1,3 @@
 - [x] Make the original logo portable to external hosting.
 - [x] Centre desktop navigation and verify desktop/mobile layouts.
+- [x] Sweep the home page, tour list, all six tour pages, enquiry screens, map, footer and browser icon for the same hosting/alignment issue; no further affected uses found.
