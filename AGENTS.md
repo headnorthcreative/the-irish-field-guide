@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Site chrome (masthead/footer) lives in `src/routes/__root.tsx`; journey content is static data in `src/lib/journeys.ts` so routes and detail pages stay in sync without a database.
+- Inquiry letters insert from the browser into `journey_inquiries` (anon insert-only RLS, no reads); validation rules live in `src/lib/inquiry.ts` and are shared by UI and tests.
