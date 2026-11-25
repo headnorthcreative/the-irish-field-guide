@@ -24,7 +24,6 @@ export const Route = createFileRoute("/")({
 const eyebrow = "italic text-[16px] text-amber";
 const h2 = "font-semibold leading-[1.02] text-moss";
 const body = "text-[17px] leading-[1.65] text-ink/75";
-const px = "px-5 md:px-14";
 
 const placements = [
   "md:col-span-6 -rotate-1",
@@ -64,8 +63,8 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="grid items-end gap-10 pb-16 pt-12 md:grid-cols-12 md:gap-12 md:pb-24 md:pt-16 md:pl-14">
-        <div className="relative px-5 pb-4 md:col-span-5 md:px-0">
+      <section className="wrap grid items-end gap-10 pb-16 pt-12 md:grid-cols-12 md:gap-12 md:pb-24 md:pt-16">
+        <div className="relative pb-4 md:col-span-5">
           <p className="hand -rotate-2 text-[24px] text-amber">Crafting unforgettable Irish dreams</p>
           <h1 className="mt-4 text-[44px] font-semibold leading-[0.98] text-ink sm:text-[56px] lg:text-[64px]" style={{ textWrap: "balance" }}>
             Where the tarmac ends, the stories begin.
@@ -87,7 +86,7 @@ function Home() {
       </section>
 
       {/* Seanchas */}
-      <section id="seanchas" className={`${px} grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="seanchas" className="wrap grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <p className={eyebrow}>Seanchas</p>
           <h2 className={`${h2} text-[40px] md:text-[46px]`}>The Art of the Road</h2>
@@ -103,7 +102,7 @@ function Home() {
       </section>
 
       {/* Map */}
-      <section className={`${px} grid items-start gap-10 border-y border-ink/15 bg-parch/70 py-16 md:py-24 lg:grid-cols-12 lg:items-center lg:gap-12`}>
+      <section className="wrap grid items-start gap-10 border-y border-ink/15 bg-parch/70 py-16 md:py-24 lg:grid-cols-12 lg:items-center lg:gap-12">
         <div className="lg:col-span-3">
           <h2 className={`${h2} text-[38px] md:text-[42px]`}>The Cartographer’s Map</h2>
           <p className={`mt-5 ${body}`}>The Ring of Kerry: 179 km of coastal cliffs, emerald valleys and colourful villages, and the places we never drive past.</p>
@@ -115,7 +114,7 @@ function Home() {
       </section>
 
       {/* Brede */}
-      <section id="brede" className={`${px} grid scroll-mt-28 items-center gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="brede" className="wrap grid scroll-mt-28 items-center gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <img src={brede} alt="Brede leaning on a drystone wall above the coast" loading="lazy" width={1280} height={1024} className="h-[340px] w-full border-[10px] border-paper object-cover md:col-span-6 md:h-[480px]" />
         <div className="md:col-span-5 md:col-start-8">
           <p className={eyebrow}>Meet Brede</p>
@@ -126,7 +125,7 @@ function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className={`${px} grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="services" className="wrap grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <p className={eyebrow}>What we do</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>One team, every kind of Irish journey</h2>
@@ -143,7 +142,7 @@ function Home() {
       </section>
 
       {/* Expeditions */}
-      <section className={`${px} border-t border-ink/20 py-16 md:py-24`}>
+      <section className="wrap border-t border-ink/20 py-16 md:py-24">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-4">
           <h2 className={`${h2} text-[40px] md:text-[46px]`}>Curated Private Tours</h2>
           <Link to="/journeys" className="border-b border-amber pb-1 text-[19px] italic text-moss hover:text-amber">All six tours →</Link>
@@ -160,7 +159,7 @@ function Home() {
       </section>
 
       {/* V-Class */}
-      <section className={`${px} grid gap-10 border-y border-ink/15 bg-parch/40 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section className="wrap grid gap-10 border-y border-ink/15 bg-parch/40 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-5">
           <p className={eyebrow}>The Carriage</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>Luxury vehicles, chosen for your party</h2>
@@ -184,7 +183,7 @@ function Home() {
       </section>
 
       {/* Ancestry */}
-      <section id="ancestry" className={`${px} grid scroll-mt-28 items-start gap-10 border-b border-ink/15 bg-parch/70 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="ancestry" className="wrap grid scroll-mt-28 items-start gap-10 border-b border-ink/15 bg-parch/70 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <p className={eyebrow}>Ancestry & Heritage</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>Finding the village they came from</h2>
@@ -204,7 +203,7 @@ function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className={`${px} grid scroll-mt-28 gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="faq" className="wrap grid scroll-mt-28 gap-10 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <p className={eyebrow}>Questions at the fireside</p>
           <h2 className={`${h2} text-[38px] md:text-[44px]`}>What travellers ask us</h2>
@@ -221,7 +220,7 @@ function Home() {
       </section>
 
       {/* Parlour */}
-      <section id="parlour" className={`${px} grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24`}>
+      <section id="parlour" className="wrap grid scroll-mt-28 gap-10 border-t border-ink/20 py-16 md:grid-cols-12 md:gap-12 md:py-24">
         <div className="md:col-span-4">
           <p className={eyebrow}>The Parlour Table</p>
           <h2 className={`${h2} text-[40px] md:text-[46px]`}>Tell us about your Irish dream</h2>

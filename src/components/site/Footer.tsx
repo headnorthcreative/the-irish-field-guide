@@ -2,7 +2,7 @@ import { PHONE_DISPLAY, PHONE_TEL, SOCIALS } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="mt-auto px-5 pb-10 md:px-14">
+    <footer className="wrap mt-auto pb-10">
       <div className="h-[3px] border-y border-brass bg-brass/70" />
       <div className="flex flex-col gap-5 pt-8 text-[15px] text-ink/70 lg:flex-row lg:items-center lg:justify-between">
         <span className="text-[24px] italic text-moss">Crafting unforgettable Irish dreams</span>

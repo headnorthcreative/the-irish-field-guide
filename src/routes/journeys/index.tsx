@@ -17,7 +17,7 @@ export const Route = createFileRoute("/journeys/")({
 
 function Journeys() {
   return (
-    <div className="px-5 py-16 md:px-14 md:py-24">
+    <div className="wrap py-16 md:py-24">
       <p className="text-[16px] italic text-amber">Journeys & Lore</p>
       <h1 className="max-w-3xl text-[44px] font-semibold leading-[1] text-moss md:text-[58px]">Routes drawn in pencil, never in ink</h1>
       <p className="mt-6 max-w-xl text-[18px] leading-[1.65] text-ink/80">Every tour is private to your party — we never combine groups — and each one can be adjusted to your interests, your pace and your stops.</p>

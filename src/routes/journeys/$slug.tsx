@@ -21,7 +21,7 @@ export const Route = createFileRoute("/journeys/$slug")({
       : [{ title: "Journey not found — Crystal Tours Ireland" }, { name: "robots", content: "noindex" }],
   }),
   notFoundComponent: () => (
-    <div className="px-5 py-24 md:px-14">
+    <div className="wrap py-24">
       <p className="hand text-[26px] text-amber">This boreen goes nowhere.</p>
       <h1 className="mt-2 text-[44px] font-semibold text-moss">We couldn’t find that journey</h1>
       <Link to="/journeys" className="mt-6 inline-block border-b border-amber pb-1 text-[20px] italic text-moss">See all journeys →</Link>
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/journeys/$slug")({
 function JourneyPage() {
   const { journey: j } = Route.useLoaderData();
   return (
-    <article className="px-5 py-12 md:px-14 md:py-20">
+    <article className="wrap py-12 md:py-20">
       <Link to="/journeys" className="text-[17px] italic text-ink/70 hover:text-amber">← All journeys</Link>
       <div className="mt-8 grid items-end gap-10 md:grid-cols-12 md:gap-12">
         <div className="md:col-span-5">

@@ -16,11 +16,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-30 lin border-b-2 border-double border-ink/30">
-      <div className="flex justify-between px-5 pt-3 text-[13px] italic text-ink/60 md:px-14">
+      <div className="wrap flex justify-between pt-3 text-[13px] italic text-ink/60">
         <span>Fáilte • Céad Míle Fáilte</span>
         <span className="hidden sm:inline">The Irish Field Guide</span>
       </div>
-      <div className="flex h-[72px] items-center gap-4 px-5 md:px-14 lg:gap-6">
+      <div className="wrap flex h-[72px] items-center gap-4 lg:gap-6">
         <Link to="/" className="shrink-0" aria-label="Crystal Tours Ireland — home">
           <CrystalToursLogo className="h-[44px] w-auto sm:h-[52px]" />
         </Link>
@@ -49,7 +49,7 @@ export function Header() {
         </Button>
       </div>
       {open && (
-        <nav className="border-t border-ink/20 px-5 pb-6 pt-2 text-[22px] text-ink lg:hidden md:px-14">
+        <nav className="wrap border-t border-ink/20 pb-6 pt-2 text-[22px] text-ink lg:hidden">
           {nav.map((n) => (
             <Link
               key={n.label}

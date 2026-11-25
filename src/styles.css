@@ -72,6 +72,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Page geometry: the only two numbers that decide how wide the site is. */
+:root {
+  --page-max: 1440px;
+  --page-gutter: 20px;
+}
+
+/* 56px is the gutter the site already used at md and up (the old md:px-14). */
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 56px;
+  }
+}
+
 :root {
   --radius: 2px;
   --background: #efe7d6;
@@ -147,6 +160,28 @@
 }
 @utility ruled {
   background-image: repeating-linear-gradient(transparent 0 39px, color-mix(in srgb, var(--ink) 10%, transparent) 39px 40px);
+}
+
+/*
+ * THE PAGE CONTAINER — the single source of truth for page width and gutters.
+ *
+ * Full-bleed bands keep their own background and border rules edge to edge; only
+ * their inline padding is computed here, so the content column inside them is
+ * capped at --page-max and centred with an equal gutter on both sides:
+ *
+ *   content = min(viewport, --page-max) - 2 * --page-gutter
+ *
+ * At 1920 that is 1440 - 112 = 1328px of content, 296px of clear space to each
+ * edge. Below --page-max it degrades to the plain gutter (20 / 56px), which is
+ * exactly the padding the site used before, so nothing reflows until there is
+ * room to spare. Use `wrap` on any full-width row or section that holds content;
+ * never re-declare the gutter anywhere else.
+ */
+@utility wrap {
+  padding-inline: max(
+    var(--page-gutter),
+    calc((100% - var(--page-max)) / 2 + var(--page-gutter))
+  );
 }
 
 @layer base {
